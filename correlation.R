@@ -91,7 +91,7 @@ new_dev <- function(w = 6, h = 6) {
 
 # Each plot will be displayed on its own window
 
-# 8.1 Upper-triangle color
+# Upper-triangle color
 new_dev()
 corrplot::corrplot(cor_plot,
                    method      = "color",
@@ -103,7 +103,7 @@ corrplot::corrplot(cor_plot,
                    number.cex  = 0.7,
                    main        = paste(timeframe_label, "Pearson"))
 
-# 8.2 Clustered ellipse
+# Clustered ellipse
 new_dev()
 corrplot::corrplot(cor_plot,
                    method    = "ellipse",
@@ -113,7 +113,7 @@ corrplot::corrplot(cor_plot,
                    tl.cex    = 0.7,
                    main      = paste(timeframe_label, "Clustered"))
 
-# 8.3 ggcorrplot
+# ggcorrplot
 new_dev()
 print(
   ggcorrplot::ggcorrplot(cor_plot,
