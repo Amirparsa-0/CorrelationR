@@ -17,7 +17,7 @@ for (pkg in required) {
 }
 
 # 2. User parameters
-data_dir    <- "m1"  
+data_dir    <- "data/m1"  
 file_glob   <- "\\.csv$"                      
 tz          <- "UTC"
 
