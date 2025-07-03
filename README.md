@@ -1,7 +1,6 @@
-# FX Correlations
+# Correlations
 
-An R script to compute log‐return correlations and plot heatmaps for M1 Forex data.
-By default, calculations include four major currency pairs (by trading volume), but you can integrate other instruments.
+An R script to compute log‐return correlations and plot heatmaps initially designed for M1 Forex data, yet other financial instruments can be intergrated as well.
 
 ## Features
 
@@ -36,16 +35,13 @@ fx-correlations/
 ├── .gitignore      # ignores data/, results/, R artifacts
 ├── correlation.R   # main script
 ├── README.md       
-├── data/
-│   └── M1/         # drop your raw M1 CSVs here
+├── data/           #placeholder for your own CSVs
 ├── results/        # outputs correlation CSVs
-└── run.R           # optional wrapper
 
-## Usage
 
-1. Place your raw CSV files (e.g. EURUSD.csv, GBPUSD.csv) into data/M1/. 
-2. Edit `data_dir`, `resample_k`, and `resample_on` at the top of `correlation.R`.  
-3. Run `source("correlation.R")` in RStudio or `Rscript correlation.R` in terminal.  
+1. Place your raw CSV files (e.g. EURUSD.csv, FTSE100) into data/example/. 
+2. Edit `data_dir`, `resample_k`, and `resample_on` at the top of `correlation.R` if needed.  
+3. invoke the following script, pointing to your folder.  
 4. Inspect the CSV output in `results/` and view the plots.
 
 Feedbacks, ideas, and pull-requests are very welcome! Feel free to open an issue or submit a PR with your suggestions.
