@@ -1,5 +1,5 @@
 # -----------------------------------------------------------------------------
-# FX Major-4 Currencies Correlations Script
+# Correlation Matrix Generator for Time-Series CSVs
 # -----------------------------------------------------------------------------
 
 options(repos = c(CRAN = "https://cloud.r-project.org/"))
@@ -17,7 +17,9 @@ for (pkg in required) {
 }
 
 # 2. User parameters
-data_dir    <- "data/m1"  
+args    <- commandArgs(trailingOnly = TRUE)
+data_dir <- if(length(args)) args[1] else "data/example"
+  
 file_glob   <- "\\.csv$"                      
 tz          <- "UTC"
 
@@ -122,5 +124,5 @@ print(
                          lab       = TRUE,
                          lab_size  = 3,
                          colors    = c("red", "white", "green"),
-                         title     = paste(timeframe_label, "FX Correlations"))
+                         title     = paste(timeframe_label, "Correlations"))
 )
